@@ -33,6 +33,13 @@ public class ShiroConfig {
 
         //配置系统受限资源
         //配置系统公共资源
+        /**
+         * anon:无需领证就可以访问
+         * authc:必须认证了才能访问
+         * user:必须拥有 记住我 功能才能用
+         * perms:拥有对某个资源的权限才能访问
+         * role: 拥有某个角色权限才访问
+         */
         Map<String, String> map = new HashMap<>();
         map.put("/user/login", "anon");
         map.put("/user/register", "anon");

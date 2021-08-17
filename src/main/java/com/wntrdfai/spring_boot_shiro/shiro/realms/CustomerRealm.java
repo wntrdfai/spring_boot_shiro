@@ -28,6 +28,7 @@ import java.util.List;
  * 作用:  自定义Realm
  */
 public class CustomerRealm extends AuthorizingRealm {
+    //授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //获取身份信息
@@ -55,6 +56,7 @@ public class CustomerRealm extends AuthorizingRealm {
         return null;
     }
 
+    //认证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         System.out.println("======================");
